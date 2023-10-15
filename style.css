@@ -1,0 +1,144 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-weight: bold;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #262626;
+}
+
+.box {
+    width: inherit;
+    height: inherit;
+}
+
+.box .header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A11E1E;
+}
+
+.header .title {
+    color: white;
+    width: 120px;
+}
+
+.box .content {
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.content h3 {
+    color: white;
+}
+
+.list .item-list {
+    background-color: white;
+    height: 75px;
+    padding: 5px;
+    display: flex;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.item-list .left {
+    padding: 0 2px;
+}
+
+.left img {
+    width: 75px;
+}
+
+.item-list .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 5px;
+    flex: 1;
+}
+
+.center span.nick {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+.center ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+.center ul li img{
+    width: 28px;
+    padding: 1px;
+}
+
+.right img {
+    width: 60px;
+}
+
+.permission {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(194, 194, 194);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.permission span {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.splash {
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    background-color: #A11E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.splash img {
+    width: 200px;
+    height: 200px;
+    animation: zoom-in-zoom-out 5s ease-out;
+}
+
+.splash span {
+    margin-top: 25px;
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.3, 1.3);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
