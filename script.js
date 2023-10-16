@@ -64,8 +64,8 @@ const addPlayer = () => {
         itemList.append(center);
 
         right.classList.add('right');
-        imgCell.src= "./assets/img/cela.svg";
-        right.append(imgCell);
+        // imgCell.src= "./assets/img/cela.svg";
+        // right.append(imgCell);
         itemList.append(right);
 
         list.append(itemList);
@@ -74,11 +74,27 @@ const addPlayer = () => {
         
         PLAYERS.push({
             name: inputNick.value,
-            color: _color
+            color: _color,
+            
         });
     });
 }
 
+const buttonStatus = () => {
+    const _buttons = document.querySelectorAll('button.validate');
+    _buttons.forEach(button => {
+        button.classList.add('disabled');
+    });
+}
+
+const startGame = () => {
+    const _btn = document.querySelector('button#startGame');
+    _btn.addEventListener('click', () => {
+        if (PLAYERS.length < 3) {
+            return alert("O mínimo para jogar são 3 pessoas.");
+        }
+    });
+}
 
 const actions = () => {
     const splash = document.querySelector('div.splash');
@@ -87,6 +103,8 @@ const actions = () => {
         playSound('tense_theme', 8);
     });
     addPlayer();
+    // buttonStatus();
+    startGame();
 }
 
 const playSound = (sound, volume=1) => {
@@ -95,6 +113,7 @@ const playSound = (sound, volume=1) => {
     audio.volume = volume/10;
     audio.play()
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     splash();

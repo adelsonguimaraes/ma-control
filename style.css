@@ -14,6 +14,9 @@ body {
 .box {
     width: inherit;
     height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .box .header {
@@ -88,23 +91,13 @@ body {
     width: 60px;
 }
 
-.permission {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 40px;
+.box .footer {
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(194, 194, 194);
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.permission span {
-    padding: 5px;
-    font-size: 18px;
-    font-weight: 600;
+    padding: 10px 0;
 }
 
 .splash {
